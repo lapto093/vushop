@@ -1,0 +1,64 @@
+Vushop\AdminBundle\Entity\Product:
+    type: entity
+    table: product
+    id:
+        productId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: product_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        productName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: product_name
+        categoryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: category_id
+        price:
+            type: decimal
+            nullable: false
+            precision: 10
+            scale: 0
+            comment: ''
+        description:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        status:
+            type: boolean
+            nullable: true
+            comment: '0: inactive, 1: active'
+        isNew:
+            type: boolean
+            nullable: true
+            comment: ''
+            column: is_new
+        mostSell:
+            type: boolean
+            nullable: true
+            comment: ''
+            column: most_sell
+        createdDate:
+            type: datetime
+            nullable: false
+            comment: ''
+            column: created_date
+        updatedDate:
+            type: datetime
+            nullable: false
+            comment: ''
+            column: updated_date
+    lifecycleCallbacks: {  }

@@ -1,0 +1,25 @@
+Vushop\AdminBundle\Entity\RelatedProduct:
+    type: entity
+    table: related_product
+    id:
+        relatedProductId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: related_product_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        productId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: product_id
+        status:
+            type: boolean
+            nullable: true
+            comment: ''
+    lifecycleCallbacks: {  }

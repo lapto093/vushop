@@ -1,0 +1,50 @@
+Vushop\AdminBundle\Entity\Category:
+    type: entity
+    repositoryClass: Vushop\AdminBundle\Repository\CategoryRepository
+    table: category
+    id:
+        categoryId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: category_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        categoryName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: category_name
+        parentId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: parent_id
+        description:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        status:
+            type: boolean
+            nullable: false
+            comment: '0: inactive, 1: active'
+        createdDate:
+            type: datetime
+            nullable: false
+            comment: ''
+            column: created_date
+        updatedDate:
+            type: datetime
+            nullable: false
+            comment: ''
+            column: updated_date
+    lifecycleCallbacks:
+      prePersist: [ doStuffOnPrePersist ]

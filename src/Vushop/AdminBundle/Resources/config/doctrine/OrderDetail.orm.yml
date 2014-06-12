@@ -1,0 +1,32 @@
+Vushop\AdminBundle\Entity\OrderDetail:
+    type: entity
+    table: order_detail
+    id:
+        orderDescriptionId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: order_description_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        orderId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: order_id
+        productId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            column: product_id
+        quantity:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+    lifecycleCallbacks: {  }

@@ -1,0 +1,35 @@
+Vushop\AdminBundle\Entity\Category:
+    type: entity
+    table: category
+    id:
+        categoryId:
+            id: true
+            type: integer
+            column: category_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        categoryName:
+            type: string
+            length: 255
+            nullable: false
+            column: category_name
+        parentId:
+            type: integer
+            nullable: true
+            column: parent_id
+        description:
+            type: text
+            nullable: true
+        status:
+            type: boolean
+            nullable: false
+        createdDate:
+            type: datetime
+            nullable: false
+            column: created_date
+        updatedDate:
+            type: datetime
+            nullable: false
+            column: updated_date
+    lifecycleCallbacks: {  }

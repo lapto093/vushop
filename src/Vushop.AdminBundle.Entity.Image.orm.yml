@@ -1,0 +1,29 @@
+Vushop\AdminBundle\Entity\Image:
+    type: entity
+    table: image
+    id:
+        imageId:
+            id: true
+            type: integer
+            column: image_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        imageName:
+            type: string
+            length: 255
+            nullable: true
+            column: image_name
+        imageUrl:
+            type: string
+            length: 500
+            nullable: false
+            column: image_url
+        productId:
+            type: integer
+            nullable: false
+            column: product_id
+        status:
+            type: boolean
+            nullable: true
+    lifecycleCallbacks: {  }

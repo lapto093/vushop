@@ -1,0 +1,37 @@
+Vushop\AdminBundle\Entity\Slideshow:
+    type: entity
+    table: slideshow
+    id:
+        slideshowId:
+            id: true
+            type: integer
+            column: slideshow_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        itemName:
+            type: string
+            length: 255
+            nullable: true
+            column: item_name
+        description:
+            type: text
+            nullable: true
+        imageUrl:
+            type: string
+            length: 500
+            nullable: false
+            column: image_url
+        url:
+            type: string
+            length: 500
+            nullable: false
+        createdDate:
+            type: datetime
+            nullable: true
+            column: created_date
+        updatedDate:
+            type: datetime
+            nullable: true
+            column: updated_date
+    lifecycleCallbacks: {  }

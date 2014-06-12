@@ -1,0 +1,22 @@
+admin_homepage:
+    pattern:  /
+    defaults: { _controller: AdminBundle:Default:index }
+    
+login_path:
+    pattern:  /login
+    defaults: { _controller: AdminBundle:Security:login }    
+        
+check_path:
+    pattern:  /login_check
+    defaults: { _controller: AdminBundle:Security:securityCheck }
+
+admin_logout:
+    pattern:  /logout
+    defaults: { _controller: AdminBundle:Security:logout }
+    
+admin_category:
+    pattern:  /category
+    defaults: { _controller: AdminBundle:Category:index }
+admin_category_create:
+    pattern:  /category/create
+    defaults: { _controller: AdminBundle:Category:create }

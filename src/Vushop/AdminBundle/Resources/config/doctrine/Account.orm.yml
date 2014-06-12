@@ -1,0 +1,45 @@
+Vushop\AdminBundle\Entity\Account:
+    type: entity
+    table: account
+    id:
+        accountId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: account_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        accountName:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: account_name
+        password:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        shippingAddress:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: shipping_address
+        createdDate:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: created_date
+        updatedDate:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: updated_date
+    lifecycleCallbacks: {  }

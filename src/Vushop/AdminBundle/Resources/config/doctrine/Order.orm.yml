@@ -1,0 +1,58 @@
+Vushop\AdminBundle\Entity\Order:
+    type: entity
+    table: order
+    id:
+        orderId:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            column: order_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        accountId:
+            type: integer
+            nullable: true
+            unsigned: false
+            comment: ''
+            column: account_id
+        accountName:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: account_name
+        shippingAddress:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: shipping_address
+        description:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+        createdDate:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: created_date
+        updatedDate:
+            type: datetime
+            nullable: true
+            comment: ''
+            column: updated_date
+        orderCode:
+            type: string
+            nullable: true
+            length: 50
+            fixed: false
+            comment: ''
+            column: order_code
+    lifecycleCallbacks: {  }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Projects/vushop/src/Vushop/AdminBundle/Repository/UserRepository.php</file>
+            <file>file:/D:/Projects/vushop/src/Vushop/AdminBundle/Resources/views/Category/index.html.twig</file>
+            <file>file:/D:/Projects/vushop/src/Vushop/AdminBundle/Controller/CategoryController.php</file>
+            <file>file:/D:/Projects/vushop/src/Vushop/AdminBundle/Resources/views/Category/create.html.twig</file>
+            <file>file:/D:/Projects/vushop/src/Vushop/AdminBundle/Form/FrmCategory.php</file>
+            <file>file:/D:/Projects/vushop/src/Vushop/AdminBundle/Entity/Category.php</file>
+            <file>file:/D:/Projects/vushop/src/Vushop/AdminBundle/Repository/CategoryRepository.php</file>
+            <file>file:/D:/Projects/vushop/src/Vushop/AdminBundle/Resources/config/routing.yml</file>
+        </group>
+    </open-files>
+</project-private>

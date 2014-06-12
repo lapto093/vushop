@@ -1,0 +1,74 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block custom_css %}
+<link href="{{ asset('bundles/admin/css/plugins/dataTables/dataTables.bootstrap.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div id="page-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Add category</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+  </div>
+  <!-- /.row -->
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Basic Elements
+            <div class="pull-right">
+              <a href="{{ path('admin_category') }}">Back To List</a>
+            </div>
+          </div>
+          {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}          
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                      <label>Category Name</label>
+                      {{ form_widget(form.category_name, {'attr' : {'class' : 'form-control'}}) }}
+                    </div>
+                    <div class="form-group">
+                      <label>Parent Id</label>
+                      {{ form_widget(form.parent_id, {'attr' : {'class' : 'form-control'}}) }}
+                    </div>
+                    <div class="form-group">
+                      <label>Description</label>
+                      {{ form_widget(form.description, {'attr' : {'class' : 'form-control'}}) }}
+                    </div>
+                    <div class="form-group">
+                      <label>Status</label>
+                      {{ form_widget(form.status, {'attr' : {'class' : 'form-control'}}) }}
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit Button</button>
+                    <button type="reset" class="btn btn-default">Reset Button</button>
+                </div>                                
+              </div>
+              <!-- /.row (nested) -->
+            </div>
+          {{ form_end(form) }}
+          <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+      </div>
+      <!-- /.panel -->
+    </div>
+  </div>
+  <!-- /.row -->
+</div>
+{% endblock %}
+
+{% block custom_js %}    
+<!-- Page-Level Plugin Scripts - Tables -->
+<script src="{{ asset('bundles/admin/js/plugins/dataTables/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('bundles/admin/js/plugins/dataTables/dataTables.bootstrap.js') }}"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#dataTables-example').dataTable();
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,31 @@
+Vushop\AdminBundle\Entity\User:
+    type: entity
+    table: user
+    id:
+        id:
+            id: true
+            type: integer
+            generator:
+                strategy: IDENTITY
+    fields:
+        username:
+            type: string
+            length: 25
+            nullable: false
+        salt:
+            type: string
+            length: 32
+            nullable: true
+        password:
+            type: string
+            length: 40
+            nullable: false
+        email:
+            type: string
+            length: 60
+            nullable: true
+        isActive:
+            type: boolean
+            nullable: true
+            column: is_active
+    lifecycleCallbacks: {  }
